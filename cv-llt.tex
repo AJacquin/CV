@@ -1,0 +1,224 @@
+%%%%%%%%%%%%%%%
+% This CV example/template is based on my own
+% CV which I (lamely attempted) to clean up, so that
+% it's less of an eyesore and easier for others to use.
+%
+% LianTze Lim (liantze@gmail.com)
+% 23 Oct, 2022
+%
+\documentclass[a4paper,skipsamekey,11pt,english]{curve}
+
+% Uncomment to enable Chinese; needs XeLaTeX
+% \usepackage{ctex}
+
+
+% Default biblatex style used for the publication list is APA6. If you wish to use a different style or pass other options to biblatex you can change them here. 
+\PassOptionsToPackage{style=ieee,sorting=ydnt,uniquename=init,defernumbers=true}{biblatex}
+
+% Most commands and style definitions are in settings.sty.
+\usepackage{settings}
+
+% If you need to further customise your biblatex setup e.g. with \DeclareFieldFormat etc please add them here AFTER loading settings.sty. For example, to remove the default "[Online] Available:" prefix before URLs when using the IEEE style:
+\DefineBibliographyStrings{french}{url={\textsc{url}}}
+
+%% Specify your last name(s) and first name(s) (as given in the .bib) to automatically bold your own name in the publications list. 
+%% One caveat: You need to write \bibnamedelima where there's a space in your name for this to work properly; or write \bibnamedelimi if you use initials in the .bib
+% \mynames{Lim/Lian\bibnamedelima Tze}
+
+%% You can specify multiple names like this, especially if you have changed your name or if you need to highlight multiple authors. See items 6–9 in the example "Journal Articles" output.
+\mynames{Lim/Lian\bibnamedelima Tze,
+  Wong/Lian\bibnamedelima Tze,
+  Lim/Tracy,
+  Lim/L.\bibnamedelimi T.}
+%% MAKE SURE THERE IS NO SPACE AFTER THE FINAL NAME IN YOUR \mynames LIST
+
+
+% Change the fonts if you want
+\ifxetexorluatex % If you're using XeLaTeX or LuaLaTeX
+  \usepackage{fontspec} 
+  %% You can use \setmainfont etc; I'm just using these font packages here because they provide OpenType fonts for use by XeLaTeX/LuaLaTeX anyway
+  \usepackage[p,osf,swashQ]{cochineal}
+  \usepackage[medium,bold]{cabin}
+  \usepackage[varqu,varl,scale=0.9]{zi4}
+\else % If you're using pdfLaTeX or latex
+  \usepackage[T1]{fontenc}
+  \usepackage[p,osf,swashQ]{cochineal}
+  \usepackage{cabin}
+  \usepackage[varqu,varl,scale=0.9]{zi4}
+\fi
+
+% Change the page margins if you want
+% \geometry{left=1cm,right=1cm,top=1.5cm,bottom=1.5cm}
+
+% Change the colours if you want
+% \definecolor{SwishLineColour}{HTML}{00FFFF}
+% \definecolor{MarkerColour}{HTML}{0000CC}
+
+% Change the item prefix marker if you want
+% \prefixmarker{$\diamond$}
+
+%% Photo is only shown if "fullonly" is included
+\includecomment{fullonly}
+% \excludecomment{fullonly}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\def \name {Axel Jacquin}
+\def \email {axel.c.e.jacquin@gmail.com}
+\def \twitter {axel\_jacquin}
+\def \linkedin {axeljacquin}
+\def \github {axjavel}
+\def \website {https://www.axel-jacquin.fr}
+
+\DeclareTranslationFallback {cv-role}{FPGA Engineer}
+\DeclareTranslation{english}{cv-role}{FPGA Engineer}
+\DeclareTranslation{french}{cv-role}{Ingénieur FPGA}
+
+\DeclareTranslationFallback{empl-empl}{Employment History}
+\DeclareTranslation{english}{empl-empl}{Employment History}
+\DeclareTranslation{french}{empl-empl}{Experiences professionnelles}
+
+\DeclareTranslationFallback{empl-aem}{Software and FPGA engineer}
+\DeclareTranslation{english}{empl-aem}{Software and FPGA engineer}
+\DeclareTranslation{french}{empl-aem}{Ingénieur en Développement Logiciel et FPGA}
+
+\DeclareTranslationFallback{empl-aem-desc}{Embedded software development and hardware description for electronic component test systems}
+\DeclareTranslation{english}{empl-aem-desc}{Embedded software development and hardware description for electronic component test systems}
+\DeclareTranslation{french}{empl-aem-desc}{Développement du logiciel débarqué et description matérielle pour des systèmes de test de composant électronique}
+
+\DeclareTranslationFallback{empl-aem-skills}{Xilinx FPGA, Verilog, Python, C, C++, Java}
+\DeclareTranslation{english}{empl-aem-skills}{Xilinx FPGA, Verilog, Python, C, C++, Java}
+\DeclareTranslation{french}{empl-aem-skills}{FPGA Xilinx, Verilog, Python, C, C++, Java}
+
+\DeclareTranslationFallback{empl-nbc}{IT Engineer}
+\DeclareTranslation{english}{empl-nbc}{IT Engineer}
+\DeclareTranslation{french}{empl-nbc}{Ingénieur en Informatique}
+
+\DeclareTranslationFallback{empl-nbc-desc}{Design of a HMI and electrical diagrams for armoured vehicles}
+\DeclareTranslation{english}{empl-nbc-desc}{Design of a HMI and electrical diagrams for armoured vehicles}
+\DeclareTranslation{french}{empl-nbc-desc}{Conception d’une IHM et de schémas électriques pour des véhicules blindés}
+
+\DeclareTranslationFallback{empl-nbc-skills}{CAN Bus, Javascript, Documentation}
+\DeclareTranslation{english}{empl-nbc-skills}{CAN Bus, Javascript, Documentation}
+\DeclareTranslation{french}{empl-nbc-skills}{Bus CAN, Javascript, Documentation}
+
+\DeclareTranslationFallback{empl-cio}{Embedded Systems Engineer}
+\DeclareTranslation{english}{empl-cio}{Embedded Systems Engineer}
+\DeclareTranslation{french}{empl-cio}{Ingénieur en Systèmes Embarqués}
+
+\DeclareTranslationFallback{empl-cio-desc}{Design of a calibration system and loss of connectivity detection for a penetrometer.}
+\DeclareTranslation{english}{empl-cio-desc}{Design of a calibration system and loss of connectivity detection for a penetrometer.}
+\DeclareTranslation{french}{empl-cio-desc}{Conception d'un système d'étalonnage et détection des pertes de connectivité pour un pénétromètre.}
+
+\DeclareTranslationFallback{empl-cio-skills}{STM32, C, Python, Analogue electronics}
+\DeclareTranslation{english}{empl-cio-skills}{STM32, C, Python, Analogue electronics}
+\DeclareTranslation{french}{empl-cio-skills}{STM32, C, Python, Electronique analogique}
+
+\DeclareTranslationFallback{empl-dit}{Researcher in Embedded Systems}
+\DeclareTranslation{english}{empl-dit}{Researcher in Embedded Systems}
+\DeclareTranslation{french}{empl-dit}{Chercheur en Systèmes Embarqués}
+
+\DeclareTranslationFallback{empl-dit-desc}{Presentation, popularisation of home automation for the elderly and design of a Bluetooth (BLE) scanner.}
+\DeclareTranslation{english}{empl-dit-desc}{Presentation, popularisation of home automation for the elderly and design of a Bluetooth (BLE) scanner.}
+\DeclareTranslation{french}{empl-dit-desc}{Présentation, vulgarisation de la domotique à des personnes agées et conception d’un scanner Bluetooth (BLE).}
+
+\DeclareTranslationFallback{empl-dit-skills}{Raspberry Pi, Linux, Python, English}
+\DeclareTranslation{english}{empl-dit-skills}{Raspberry Pi, Linux, Python, English}
+\DeclareTranslation{french}{empl-dit-skills}{Raspberry Pi, Linux, Python, Anglais}
+
+\DeclareTranslationFallback{empl-oi}{Automation Technician}
+\DeclareTranslation{english}{empl-oi}{Automation Technician}
+\DeclareTranslation{french}{empl-oi}{Technicien en Automatisme}
+
+\DeclareTranslationFallback{empl-oi-desc}{Design of a test bench for glass bottle forming machines.}
+\DeclareTranslation{english}{empl-oi-desc}{Design of a test bench for glass bottle forming machines.}
+\DeclareTranslation{french}{empl-oi-desc}{Conception d’un banc d’essai pour des machines de formage de bouteilles en verre.}
+
+\DeclareTranslationFallback{empl-oi-skills}{Ladder, Electrical engineering, Mechanical engineering, Maintenance}
+\DeclareTranslation{english}{empl-oi-skills}{Ladder, Electrical engineering, Mechanical engineering, Maintenance}
+\DeclareTranslation{french}{empl-oi-skills}{Ladder, Electrotechnique, Mecanique, Maintenance}
+
+\DeclareTranslationFallback{educ-educ}{Education}
+\DeclareTranslation{english}{educ-educ}{Education}
+\DeclareTranslation{french}{educ-educ}{Formation}
+
+\DeclareTranslationFallback{educ-master}{M.Sc. Electronics, Electrical Energy and Automation}
+\DeclareTranslation{english}{educ-master}{M.Sc. Electronics, Electrical Energy and Automation}
+\DeclareTranslation{french}{educ-master}{Master Electronique, Energie Electrique et Automatique}
+
+\DeclareTranslationFallback{educ-master-desc}{Electronics and Embedded Systems path}
+\DeclareTranslation{english}{educ-master-desc}{Electronics and Embedded Systems path}
+\DeclareTranslation{french}{educ-master-desc}{Parcours Electronique et Systèmes Embarqués}
+
+\DeclareTranslationFallback{educ-inge}{Master of Engineering}
+\DeclareTranslation{english}{educ-inge}{Master of Engineering}
+\DeclareTranslation{french}{educ-inge}{Diplome d'Ingénieur}
+
+\DeclareTranslationFallback{educ-inge-desc}{Electronics and Image Processing path}
+\DeclareTranslation{english}{educ-inge-desc}{Electronics and Image Processing path}
+\DeclareTranslation{french}{educ-inge-desc}{Parcours Electronique et Traitement d'Image}
+
+\DeclareTranslationFallback{educ-citise}{Initial Cycle in Information Technology}
+\DeclareTranslation{english}{educ-citise}{Initial Cycle in Information Technology}
+\DeclareTranslation{french}{educ-citise}{Cycle Initial en Technologies de l’Information}
+
+\DeclareTranslationFallback{educ-dut}{Technical Degree in Electrical, Electronic and Computing Engineering}
+\DeclareTranslation{english}{educ-dut}{Technical Degree in Electrical, Electronic and Computing Engineering}
+\DeclareTranslation{french}{educ-dut}{DUT Génie Electrique et Informatique Industrielle}
+
+\DeclareTranslationFallback{skil-skil}{Skills}
+\DeclareTranslation{english}{skil-skil}{Skills}
+\DeclareTranslation{french}{skil-skil}{Compétences}
+
+\DeclareTranslationFallback{skil-lang}{Languages}
+\DeclareTranslation{english}{skil-lang}{Languages}
+\DeclareTranslation{french}{skil-lang}{Langues}
+
+\DeclareTranslationFallback{skil-lang-list}{French (native), English (TOEIC 810), Spanish (B1), Portuguese (A2).}
+\DeclareTranslation{english}{skil-lang-list}{French (native), English (TOEIC 810), Spanish (B1), Portuguese (A2).}
+\DeclareTranslation{french}{skil-lang-list}{Français (natif), Anglais (TOEIC 810), Espagnol (B1), Portugais (A2).}
+
+\DeclareTranslationFallback{skil-cod}{Coding}
+\DeclareTranslation{english}{skil-cod}{Coding}
+\DeclareTranslation{french}{skil-cod}{Codage}
+
+\DeclareTranslationFallback{skil-soft}{Software}
+\DeclareTranslation{english}{skil-soft}{Software}
+\DeclareTranslation{french}{skil-soft}{Logiciels}
+
+\DeclareTranslationFallback{skil-misc}{Misc.}
+\DeclareTranslation{english}{skil-misc}{Misc.}
+\DeclareTranslation{french}{skil-misc}{Divers}
+
+\DeclareTranslationFallback{skil-misc-list}{Tennis, Running, Climbing, Piano, Rubik's Cube}
+\DeclareTranslation{english}{skil-misc-list}{Tennis, Running, Climbing, Piano, Rubik's Cube}
+\DeclareTranslation{french}{skil-misc-list}{Tennis, Course à pied, Escalade, Judo, Piano, Rubik's Cube\newline
+Trésorier d'une association de robotique entre 2017 et 2019. 1er aux coupes Auvergne-Rhône-Alpes 2018 et 2019, 9ème à la Coupe de France 2019}
+
+\leftheader{%
+  {\LARGE\bfseries\sffamily \name, \GetTranslation{cv-role}}
+  
+  \makefield{\faEnvelope[regular]}{\href{mailto:\email}{\texttt{\email}}}
+  \makefield{\faPhone}{\href{tel:+33640350125}{(+33) 06.40.35.01.25}}
+  % \makefield{\faTwitter}{\href{https://twitter.com/\twitter}{\texttt{\twitter}}}
+    
+  \makefield{\faLinkedin}{\href{http://www.linkedin.com/in/\linkedin}{\texttt{\linkedin}}}
+  \makefield{\faGithub}{\href{https://github.com/\github}{\github}}
+  % \makefield{\faGlobe}{\url{\website}}
+}
+
+\rightheader{~}
+\begin{fullonly}
+\photo[r]{photo}
+\photoscale{0.13}
+\end{fullonly}
+
+\title{Curriculum Vitae}
+
+\begin{document}
+\makeheaders[c]
+
+\makerubric{employment}
+\makerubric{education}
+\makerubric{skills}
+\end{document}

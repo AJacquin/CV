@@ -1,11 +1,9 @@
 # simple-hipstercv
-A more simple, lightweight and a little bit different version of the Hipster CV
-
-
-*Image credits for the example images goes to Disney!*
-
-These images are in the CV just for demonstration.
-Please replace them with your own photos and logos if you use this template!
+<object data="JACQUIN_Axel_CV.pdf" type="application/pdf" width="700px" height="700px">
+    <embed src="JACQUIN_Axel_CV.pdf">
+        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="JACQUIN_Axel_CV.pdf">Download PDF</a>.</p>
+    </embed>
+</object>
 
 # Preview (withoutsidebar option)
 ![Timeline CV](https://github.com/latex-ninja/simple-hipstercv/blob/master/withoutsidebar.png)

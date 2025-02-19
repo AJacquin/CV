@@ -2,15 +2,16 @@
 \usepackage[utf8]{inputenc}
 \usepackage[default]{raleway}
 \usepackage[margin=1cm, a4paper]{geometry}
+\usepackage{hyperref} % Ajout du package hyperref
 
 \newlength{\rightcolwidth}
 \newlength{\leftcolwidth}
 \setlength{\leftcolwidth}{0.23\textwidth}
 \setlength{\rightcolwidth}{0.75\textwidth}
 
-\title{Nouveau CV Simple}
-\author{\LaTeX{} Ninja}
-\date{Juin 2019}
+\title{Axel Jacquin's CV}
+\author{\LaTeX{} Axel Jacquin}
+\date{\today}
 
 \pagestyle{empty}
 \begin{document}
@@ -19,7 +20,7 @@
 
 \section*{Début}
 
-\simpleheader{headercolour}{Axel}{Jacquin}{Ingénieur FPGA}{white}
+\simpleheader{headercolour}{Axel}{Jacquin}{Ingénieur en Électronique Numérique}{white}
 
 \subsection*{}
 \vspace{4em}
@@ -36,7 +37,7 @@
 \flushright
 
 \begin{center}
-    \roundpic{axel.jpg}
+    \roundpic{pictures/axel.jpg}
 \end{center}
 
 \bg{cvgreen}{white}{Coordonnées} \\[0.5em]
@@ -53,7 +54,7 @@
 
 \bg{cvgreen}{white}{Compétences}\\[0.5em]
 
-\texttt{Verilog} ~/~ \texttt{SV} ~/~ \texttt{VHDL}
+\texttt{Verilog} ~/~ \texttt{SystemVerilogV} ~/~ \texttt{VHDL}
 
 \texttt{Xsim} ~/~ \texttt{Modelsim} ~/~ \texttt{Gtkwave}
 
@@ -75,15 +76,14 @@ MAO, Piano
 
 Tennis, Course à pied, Escalade, Judo
 
-\vspace{40em}
+\vspace{41em}
 
-\infobubble{\faGithub}{cvgreen}{white}{AJacquin}
+\infobubble{\faGithub}{cvgreen}{white}{\href{https://github.com/AJacquin}{AJacquin}}
 
-\infobubble{\faLinkedin}{cvgreen}{white}{axeljacquin}
-
-\phantom{tournez la page}
+\infobubble{\faLinkedin}{cvgreen}{white}{\href{https://www.linkedin.com/in/axeljacquin}{axeljacquin}}
 
 \phantom{tournez la page}
+
 }
 \switchcolumn
 
@@ -91,27 +91,29 @@ Tennis, Course à pied, Escalade, Judo
 \section*{Expériences}
 
 \begin{tabular}{r| p{0.5\textwidth} c}
-    \cvevent{2021--}{Ingénieur en Développement Logiciel et FPGA}{AEM Mu-Test}{Saint-Jean-Bonnefonds (France)}{Architecture, développement, simulation et validation FPGA.
+    \cvevent{2021--}{Ingénieur en Électronique Numérique}{\href{https://aem.com.sg}{AEM Mu-Test}}{Saint-Jean-Bonnefonds (France)}{Architecture, développement, simulation et validation FPGA.
 
-    Architecture et développement des logiciels débarqués.
+    Architecture et développement de logiciels débarqués.
     
     Mise en place d'un serveur de tests de non-regressions.
 
     Caractérisation d'un système de test de composants électroniques.
+
+    Planification du développement d'une carte électronique.
     
-    FPGA Xilinx, PICmicro, Verilog, UVM, Python, cocotb, C, C++, Java, Swing, Mercurial}{pictures/aem.png} \\
-    \cvevent{2020--2021}{Ingénieur en Informatique}{NBC-Sys (Nexter)}{Saint-Chamond (France)}{Programmation d’une IHM et de schémas électriques pour des véhicules blindés.
+    FPGA Xilinx, PICmicro, Verilog, UVM, Python, cocotb, C, C++, Java, Hg, Planification}{pictures/aem.png} \\
+    \cvevent{2020--2021}{Ingénieur en Automatisme}{\href{https://www.knds.fr/en/our-brand/knds-cbrn}{NBC-Sys (KNDS CBRN)}}{Saint-Chamond (France)}{Programmation d’une IHM et de schémas électriques pour des véhicules blindés.
     
     Bus CAN, Javascript, Documentation}{pictures/nbc.png} \\
-    \cvevent{2020}{Ingénieur en Systèmes Embarqués}{CIO Systèmes Embarqués}{Saint-Etienne (France)}{Stage. Conception d’un système d’étalonnage et détection des pertes de connectivité pour un pénétromètre.
+    \cvevent{2020}{Ingénieur en Systèmes Embarqués}{\href{https://www.ciose.fr/}{CIO Systèmes Embarqués}}{Saint-Etienne (France)}{Conception d’un système d’étalonnage et détection des pertes de connectivité pour un pénétromètre.
     
-    STM32, C, Python, wxWidgets, Git, Electronique analogique}{pictures/cio.png} \\
-    \cvevent{2019}{Chercheur en Systèmes Embarqués}{Dublin Institute of Technology}{Dublin (Ireland)}{Stage. Présentation, vulgarisation de la domotique à des personnes agées et conception d’un scanner Bluetooth (BLE).
+    STM32, C, Python, wxWidgets, Git, Électronique analogique}{pictures/cio.png} \\
+    \cvevent{2019}{Ingénieur en Systèmes Embarqués}{\href{https://www.tudublin.ie}{Dublin Institute of Technology}}{Dublin (Ireland)}{Conception d’un scanner Bluetooth (BLE), vulgarisation de la domotique à des personnes âgées.
     
     Raspberry Pi, Python, Linux, Anglais}{pictures/dit.jpg} \\
-    \cvevent{2017}{Technicien en Automatisme}{O-I Manufacturing}{Veauche (France)}{Stage. Conception d’un banc d’essai pour des machines de formage de bouteilles en verre.
+    \cvevent{2017}{Technicien en Automatisme}{\href{https://www.o-i.com}{O-I Manufacturing}}{Veauche (France)}{Conception d’un banc d’essai pour des machines de formage de bouteilles en verre.
     
-    Automates, Ladder, Electrotechnique, Mecanique, Maintenance}{pictures/oi.png}
+    Automates (Télémécanique), Ladder, Electrotechnique, Mecanique, Maintenance}{pictures/oi.png}
 \end{tabular}
 \vspace{3em}
 
@@ -127,15 +129,17 @@ Tennis, Course à pied, Escalade, Judo
 \begin{minipage}[t]{0.3\textwidth}
 \section*{Programmation}
 \begin{tabular}{r @{\hspace{0.5em}}l}
-     \bg{skilllabelcolour}{iconcolour}{Verilog} &  \barrule{0.45}{0.5em}{cvgreen}\\
-     \bg{skilllabelcolour}{iconcolour}{VHDL} & \barrule{0.35}{0.5em}{cvgreen} \\
-     \bg{skilllabelcolour}{iconcolour}{C, C++} & \barrule{0.40}{0.5em}{cvgreen} \\
-     \bg{skilllabelcolour}{iconcolour}{Java} & \barrule{0.1}{0.5em}{cvpurple} \\
-     \bg{skilllabelcolour}{iconcolour}{Javascript} & \barrule{0.15}{0.5em}{cvpurple} \\
-     \bg{skilllabelcolour}{iconcolour}{Python} & \barrule{0.35}{0.5em}{cvgreen} \\
-     \bg{skilllabelcolour}{iconcolour}{Matlab} & \barrule{0.2}{0.5em}{cvpurple} \\
-     \bg{skilllabelcolour}{iconcolour}{\LaTeX} & \barrule{0.15}{0.5em}{cvpurple} \\
+    \textbf{Verilog} &  \barrule{0.55}{0.5em}{cvgreen}\\
+    \textbf{VHDL} & \barrule{0.45}{0.5em}{cvgreen} \\
+    \textbf{C, C++} & \barrule{0.5}{0.5em}{cvgreen} \\
+    \textbf{Java} & \barrule{0.2}{0.5em}{cvpurple} \\
+    \textbf{Javascript} & \barrule{0.25}{0.5em}{cvpurple} \\
+    \textbf{Python} & \barrule{0.45}{0.5em}{cvgreen} \\
+    \textbf{Matlab} & \barrule{0.3}{0.5em}{cvpurple} \\
+    \textbf{\href{https://github.com/AJacquin/CV}{\LaTeX}} & \barrule{0.25}{0.5em}{cvpurple} \\
 \end{tabular}
+
+\vspace{6em}
 
 \section*{Langues}
 \begin{tabular}{l | ll}
@@ -146,8 +150,6 @@ Tennis, Course à pied, Escalade, Judo
 \end{tabular}
 
 \end{minipage}
-
-\vfill{}
 
 \end{paracol}
 
